@@ -8,11 +8,24 @@ function addBlog(event){
     let startDate = document.getElementById("in-startdate").value
     let endDate = document.getElementById("in-enddate").value
     let description = document.getElementById("in-Description").value
-    let iconNodeJs = document.getElementById("node-js").value
-    let iconNextJs = document.getElementById("next-js").value
-    let iconReactJs = document.getElementById("react-js").value
-    let iconTypeScript = document.getElementById("type-script").value
+    let iconNodeJs = document.getElementById("node-js").checked
+    let iconNextJs = document.getElementById("next-js").checked
+    let iconReactJs = document.getElementById("react-js").checked
+    let iconTypeScript = document.getElementById("type-script").checked
     let image = document.getElementById("in-image").files
+
+    if(iconNodeJs){
+        iconNodeJs = document.getElementById("node-js").value
+    } else {iconNodeJs = ``}
+    if(iconNextJs){
+        iconNextJs = document.getElementById("next-js").value
+    } else {iconNextJs = ``}
+    if(iconReactJs){
+        iconReactJs = document.getElementById("react-js").value
+    } else {iconReactJs = ``}
+    if(iconTypeScript){
+        iconTypeScript = document.getElementById("type-script").value
+    } else {iconTypeScript = ``}
 
     image = URL.createObjectURL(image[0])
     
